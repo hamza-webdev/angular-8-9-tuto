@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-scratch"
+    }
+  },
+  "defaultProject": "angular-scratch",
+  "cli": {
+    "analytics": "aa78791f-f39e-48b7-adc1-c44958e9a7cf"
+  }
 }
