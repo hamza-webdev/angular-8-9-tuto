@@ -6,7 +6,7 @@
 <input minlength="3" maxlength="12" required ngModel name="firstName" #firstName="ngModel" (change)="log(firstName)" id="firstName" type="text" class="form-control">
 <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
 <div *ngIf="firstName.errors.required">First Name is required </div>
-<div *ngIf="firstName.errors.minlength">first Name must be up 3 carecteres </div>
+<div *ngIf="firstName.errors.minlength">first Name must be up {{ firstName.errors.minlenght}} carecteres </div>
 <div *ngIf="firstName.errors.maxlength">First Name must be less 12 carecteres </div>
 </div>
 </div>
