@@ -1,4 +1,40 @@
 <h1>Angular Framwork</h1>
+
+
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>E-mail</mat-label>
+    <span matPrefix>domain.</span>
+    <input ngModel #username="ngModel" name="username" type="text" matInput placeholder="Username" required>
+    <span matSuffix>@gmail.com</span>
+  </mat-form-field>
+  <mat-error *ngIf="username.invalid && username.errors.required"> the user name is required ! </mat-error>
+</form>
+<hr>
+<h4>Basic mat-select</h4>
+<mat-form-field>
+  <mat-label>Favorite food</mat-label>
+  <mat-select [(ngModel)]="food" >
+    <mat-option *ngFor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<hr>
+<mat-radio-group aria-label="Select an option">
+  <mat-radio-button value="1"> Male </mat-radio-button>
+  <mat-radio-button value="0" [checked]="!isCheched">Female</mat-radio-button>
+</mat-radio-group>
+
+<hr>
+<mat-checkbox #showDetails [value]="myvalue"
+              [checked]="isCheched"
+              (change)="onChange($event)"
+              id="showDetails" >Suscribe to newsletter</mat-checkbox>
+<div *ngIf="showDetails.checked"> Show details ... ... !!</div>
+
+
+<hr>
 <h2>1 methode ngif</h2>
 <div *ngIf="courses.length > 0; then coursesList else noCourses"> List of Courses</div>
 <ng-template #coursesList>
